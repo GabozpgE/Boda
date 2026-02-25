@@ -1,210 +1,28 @@
 <!doctype html>
-<html lang="es-MX">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f6f1e8" />
-  <title>Invitación | Natalia & Jorge</title>
-
-  <link rel="stylesheet" href="styles.css">
+  <title>Invitación</title>
+  <link rel="stylesheet" href="cartaEstilo.css" />
 </head>
-
 <body>
-  <main id="invitation" class="invitation" aria-label="Invitación de boda">
-<!-- GIF INTRO -->
-<section class="intro-gif" aria-label="Animación inicial">
-  <img
-    class="intro-gif__img"
-    src="Tarjeta de invitación Boda Elegante Floral Blanco.gif"
-    alt="Animación de apertura del sobre"
-    loading="eager"
-    decoding="async"
-  />
-</section>
-<!-- FOTO DE LOS NOVIOS -->
-<section class="couple-photo" aria-label="Foto de los novios">
-  <img
-    class="couple-photo__img"
-    src="1-66.jpg"
-    alt="Natalia y Jorge"
-    loading="lazy"
-    decoding="async"
-  />
-</section>
-<!-- IMAGEN CON TEXTO -->
-<section class="invitation-text-image" aria-label="Mensaje especial">
-  <img
-    class="invitation-text-image__img"
-    src="Tarjeta de invitación Boda Elegante Floral Blanco (4).png"
-    alt="Mensaje especial de los novios"
-    loading="lazy"
-    decoding="async"
-  />
-</section>
-    <!-- HERO -->
-    <header class="hero" aria-label="Portada">
-      <figure class="hero__figure">
-        <img
-          class="hero__img"
-          src="cartaBoda.png"
-          alt="Invitación de boda: Natalia y Jorge - 25 de abril de 2026"
-        />
-      </figure>
-    </header>
+  <main class="stage">
+    <!-- Fondo -->
+    <img class="bg" src="Fondo.png" alt="" draggable="false" />
 
-    <!-- CONTENIDO -->
-    <section class="fade-zone" aria-label="Información del evento">
+    <!-- Texto -->
+    <section class="copy" aria-label="Mensaje">
+      <h1>Te llegó una invitación</h1>
+      <p>Toca el sobre</p>
+    </section>
 
-     <!-- CEREMONIA (solo imagen + botón encima) -->
-<section id="ceremonia" class="card card--location location-card">
-  <figure class="location-card__media">
-    <img
-      class="location-card__img"
-      src="1.png"
-      alt="Ceremonia - Parroquia de San Francisco"
-      loading="lazy"
-      decoding="async"
-    />
-
-    <!-- Botón encima de la imagen -->
-    <a
-      class="btn btn--outline location-card__btn"
-      href="#"
-      data-maps="ceremonia"
-      aria-label="Ver ubicación de la ceremonia"
-    >
-      Ver ubicación
-    </a>
-  </figure>
-</section>
-
-<!-- RECEPCIÓN (solo imagen + botón encima) -->
-<section id="recepcion" class="card card--location location-card">
-  <figure class="location-card__media">
-    <img
-      class="location-card__img"
-      src="2.png"
-      alt="Recepción - Salón Casa Diamante"
-      loading="lazy"
-      decoding="async"
-    />
-
-    <!-- Botón encima de la imagen -->
-    <a
-      class="btn btn--outline location-card__btn"
-      href="#"
-      data-maps="recepcion"
-      aria-label="Ver ubicación de la recepción"
-    >
-      Ver ubicación
-    </a>
-  </figure>
-</section>
-
-      <!-- ITINERARIO -->
-      <section id="itinerario" class="card card--timeline">
-        <h2 class="card__title">Itinerario</h2>
-
-        <ol class="timeline">
-          <li class="timeline__item">
-            <span class="timeline__icon">⛪</span>
-            <span class="timeline__label">Ceremonia</span>
-            <time class="timeline__time">5:40 PM</time>
-          </li>
-
-          <li class="timeline__item">
-            <span class="timeline__icon">🥂</span>
-            <span class="timeline__label">Recepción</span>
-            <time class="timeline__time">7:30 PM</time>
-          </li>
-
-          <li class="timeline__item">
-            <span class="timeline__icon">🍽️</span>
-            <span class="timeline__label">Cena</span>
-            <time class="timeline__time">9:00 PM</time>
-          </li>
-
-          <li class="timeline__item">
-            <span class="timeline__icon">🎉</span>
-            <span class="timeline__label">Fiesta</span>
-            <time class="timeline__time">10:00 PM</time>
-          </li>
-        </ol>
-      </section>
-
-      <!-- CONTADOR -->
-      <section id="contador" class="card card--countdown">
-        <h2 class="card__title">Faltan</h2>
-
-        <div class="countdown">
-          <div class="countdown__item">
-            <span id="cdDays" class="countdown__value">--</span>
-            <span class="countdown__label">Días</span>
-          </div>
-          <div class="countdown__item">
-            <span id="cdHours" class="countdown__value">--</span>
-            <span class="countdown__label">Horas</span>
-          </div>
-          <div class="countdown__item">
-            <span id="cdMinutes" class="countdown__value">--</span>
-            <span class="countdown__label">Min</span>
-          </div>
-          <div class="countdown__item">
-            <span id="cdSeconds" class="countdown__value">--</span>
-            <span class="countdown__label">Seg</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- IMAGEN CÓDIGO DE VESTIMENTA -->
-<section id="vestimenta" class="dresscode-image">
-  <img
-    class="dresscode-image__img"
-    src="CodigoVestimenta.png"
-    alt="Código de vestimenta - Rigurosa etiqueta"
-    loading="lazy"
-    decoding="async"
-  />
-</section>
-<!-- MESA DE REGALOS -->
-<section id="mesaRegalos" class="card gift-card">
-  <h2 class="card__title">Mesa de regalos</h2>
-
-  <p class="card__text muted">
-    Hemos preparado una mesa de regalos para quienes deseen acompañarnos con un detalle especial.
-  </p>
-
-  <div class="card__actions">
-    <a
-      class="btn btn--primary"
-      href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51948515"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Ver en Liverpool
-    </a>
-  </div>
-</section>
-
-    <!-- CIERRE -->
-    <footer class="closing">
-      <figure class="closing__figure">
-        <img
-          class="closing__img"
-          src="confirmaciondeAsistencia.png"
-          alt="Confirmación de asistencia"
-        />
-
-        <div class="closing__overlay">
-          <a id="btnRsvp" class="btn btn--primary" href="#">
-            Confirmar asistencia
-          </a>
-        </div>
-      </figure>
-    </footer>
-
+    <!-- Sobre (clickeable) -->
+    <button class="envelopeBtn" id="openBtn" aria-label="Abrir invitación">
+      <img class="envelope" src="cartaAzul.png" alt="Sobre cerrado" draggable="false" />
+    </button>
   </main>
 
-  <script src="script.js"></script>
+  <script src="Carta.js"></script>
 </body>
 </html>
