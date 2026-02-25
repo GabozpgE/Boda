@@ -1,0 +1,87 @@
+:root{
+  --maxW: 430px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; margin:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#f5f0e8;
+  overflow:hidden;
+}
+
+.stage{
+  position:relative;
+  height:100svh;
+  display:grid;
+  place-items:center;
+}
+
+.bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  user-select:none;
+  pointer-events:none;
+}
+
+.copy{
+  position:absolute;
+  top:6svh;
+  width:min(var(--maxW), 92vw);
+  text-align:center;
+  z-index:2;
+  padding:10px 14px;
+}
+
+.copy h1{
+  margin:0 0 6px 0;
+  font-family: "Georgia", serif; /* puedes cambiar a tu serif */
+  font-weight:500;
+  letter-spacing:.5px;
+  font-size: clamp(28px, 4.2vw, 44px);
+  color:#2b2b2b;
+}
+
+.copy p{
+  margin:0;
+  font-size: clamp(14px, 2.8vw, 18px);
+  color:#4a4a4a;
+  opacity:.9;
+}
+
+/* Botón sobre */
+.envelopeBtn{
+  border:0;
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  z-index:3;
+  width:min(520px, 92vw);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.envelope{
+  width:100%;
+  height:auto;
+  display:block;
+  filter: drop-shadow(0 18px 22px rgba(0,0,0,.18));
+  transform: translateZ(0);
+}
+
+.envelopeBtn:active .envelope{
+  transform: scale(.98);
+}
+
+.bg { z-index: 0; }
+
+.copy { 
+  z-index: 10;   /* súbelo arriba de todo */
+}
+
+.envelopeBtn { 
+  z-index: 5;    /* el sobre debajo del texto */
+}

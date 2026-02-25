@@ -1,0 +1,455 @@
+/* =========================
+   Invitación Boda (Mobile-first)
+   Estilo: editorial minimal / neutros / vertical
+   ========================= */
+
+/* --- Reset / base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f6f1e8;
+  color: #2a2a2a;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* --- Variables --- */
+:root {
+  --bg-cream: #f6f1e8;
+  --bg-ivory: #fbf9f4;
+  --paper: #ffffff;
+  --ink: #2a2a2a;
+  --muted: #6f6a63;
+  --line: rgba(42, 42, 42, 0.16);
+  --gold: #b08a3d;
+  --shadow: 0 10px 26px rgba(0,0,0,.10);
+
+  --radius: 18px;
+  --maxW: 420px;
+}
+
+/* --- Layout principal --- */
+.invitation {
+  width: 100%;
+  max-width: var(--maxW);
+  margin: 0 auto;
+  background: var(--bg-ivory);
+}
+
+/* --- HERO --- */
+.hero__figure {
+  margin: 0;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+}
+
+/* --- Fade zone (transición) --- */
+.fade-zone {
+  padding: 22px 16px 26px;
+  background: linear-gradient(
+    180deg,
+    rgba(246,241,232,0) 0%,
+    rgba(246,241,232,.7) 10%,
+    rgba(251,249,244,1) 35%,
+    rgba(251,249,244,1) 100%
+  );
+}
+
+/* --- Cards --- */
+.card {
+  background: rgba(255,255,255,.78);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  padding: 18px 16px;
+  margin: 14px 0;
+  backdrop-filter: blur(3px);
+}
+
+.card__title {
+  margin: 0 0 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.card__place,
+.card__address,
+.card__text {
+  margin: 0 0 8px;
+  line-height: 1.45;
+  font-size: 14.5px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 12.5px;
+}
+
+/* =========================
+   IMÁGENES DENTRO DE TARJETAS
+   (Ceremonia / Recepción)
+   ========================= */
+.card__image {
+  margin: 14px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(42,42,42,.14);
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- Botones --- */
+.card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: transform .08s ease, background .18s ease, opacity .18s ease;
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: rgba(42,42,42,.28);
+}
+
+.btn--outline:hover {
+  background: rgba(42,42,42,.05);
+}
+
+.btn--ghost {
+  background: rgba(176,138,61,.08);
+  border-color: rgba(176,138,61,.25);
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* --- Itinerario --- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px dashed rgba(42,42,42,.16);
+  background: rgba(255,255,255,.55);
+}
+
+.timeline__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(176,138,61,.10);
+  border: 1px solid rgba(176,138,61,.22);
+}
+
+.timeline__time {
+  font-size: 13px;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+/* --- Contador --- */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.countdown__item {
+  border: 1px solid rgba(42,42,42,.16);
+  background: rgba(255,255,255,.65);
+  border-radius: 14px;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.countdown__value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.countdown__label {
+  font-size: 11.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- Cierre --- */
+.closing__figure {
+  margin: 0;
+  position: relative;
+}
+
+.closing__img {
+  width: 100%;
+}
+
+.closing__overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: min(92%, 360px);
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(251,249,244,.8);
+  border: 1px solid rgba(42,42,42,.18);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+/* --- Ajuste visual --- */
+.hero + .fade-zone {
+  margin-top: -2px;
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+  body {
+    background: linear-gradient(180deg, #efe7da 0%, #fbf9f4 45%, #efe7da 100%);
+  }
+
+  .invitation {
+    margin: 24px auto;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 44px rgba(0,0,0,.16);
+  }
+}
+/* =========================
+   TARJETAS CEREMONIA/RECEPCIÓN
+   (imagen completa + botón overlay)
+   ========================= */
+
+.location-card {
+  padding: 0;            /* la tarjeta ya es la imagen */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.location-card__media {
+  margin: 0;
+  position: relative;   /* necesario para overlay */
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(42, 42, 42, 0.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+}
+
+.location-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botón encima de la imagen:
+   AJUSTA este "top" hasta que caiga perfecto entre hora y dirección */
+/* Botón overlay: responsivo y con posición por tarjeta */
+.location-card__btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* ⬇️ 30% menos alto */
+  min-height: 20px;
+  padding: clamp(3.5px, 1.1vw, 4.5px) clamp(12px, 3.2vw, 14px);
+
+  font-size: clamp(11px, 3vw, 13px);
+  letter-spacing: .14em;
+
+  width: min(64%, 220px);
+
+  background: rgba(251, 249, 244, 0.86);
+  border-color: rgba(42,42,42,.35);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+}
+
+
+/* ✅ Posición vertical distinta para cada imagen (ajusta SOLO estos % si quieres afinar) */
+#ceremonia .location-card__btn {
+  top: 79.5%;
+}
+
+#recepcion .location-card__btn {
+  top: 78.5%;
+}
+
+/* En pantallas muy compactas, subimos un pelito para que no tape texto */
+@media (max-width: 380px) {
+  #ceremonia .location-card__btn { top: 73.5%; }
+  #recepcion .location-card__btn { top: 70.5%; }
+}
+
+
+/* Un pelín más chico en pantallas muy compactas */
+@media (max-width: 380px) {
+  .location-card__btn {
+    min-height: 40px;
+    padding: 9px 12px;
+    font-size: 13px;
+    top: 73%;
+  }
+}
+/* =========================
+   GIF INTRO SUPERIOR
+   ========================= */
+
+.intro-gif {
+  width: 100%;
+  background: var(--bg-cream);
+}
+
+.intro-gif__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Opcional: pequeña separación visual */
+.intro-gif + .hero {
+  margin-top: -2px;
+}
+
+/* =========================
+   FOTO NOVIOS
+   ========================= */
+
+.couple-photo {
+  width: 100%;
+  background: var(--bg-ivory);
+}
+
+.couple-photo__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   IMAGEN TEXTO INVITACIÓN
+   ========================= */
+
+.invitation-text-image {
+  width: 100%;
+  background: var(--bg-ivory);
+}
+
+.invitation-text-image__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Espaciado suave entre bloques */
+.intro-gif + .couple-photo {
+  margin-top: 0;
+}
+
+.couple-photo + .invitation-text-image {
+  margin-top: 0;
+}
+/* =========================
+   IMAGEN CÓDIGO DE VESTIMENTA
+   ========================= */
+
+.dresscode-image {
+  margin: 20px 0;
+}
+
+.dresscode-image__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+/* =========================
+   MESA DE REGALOS
+   ========================= */
+
+.gift-card {
+  text-align: center;
+}
+
+.gift-card .card__actions {
+  justify-content: center;
+  margin-top: 14px;
+}
